@@ -320,7 +320,8 @@ public class XmiParser {
       for ( IPhysicalModel model : domain.getPhysicalModels() ) {
         if ( model instanceof SqlPhysicalModel ) {
           SqlPhysicalModel sqlModel = (SqlPhysicalModel) model;
-          for ( SqlPhysicalTable table : sqlModel.getPhysicalTables() ) {
+          for ( IPhysicalTable physicalTable : sqlModel.getPhysicalTables() ) {
+            SqlPhysicalTable table = (SqlPhysicalTable) physicalTable;
             Element cwmRdbTable = doc.createElement( "CWMRDB:Table" ); //$NON-NLS-1$
             cwmRdbTable.setAttribute( "isAbstract", "false" ); //$NON-NLS-1$ //$NON-NLS-2$
             cwmRdbTable.setAttribute( "isSystem", "false" ); //$NON-NLS-1$ //$NON-NLS-2$

@@ -40,7 +40,7 @@ public class InlineEtlPhysicalModel extends Concept implements IPhysicalModel {
   private static final String CLASS_ID = "IPhysicalModel";
 
   // this contains a list of the physical tables
-  private List<InlineEtlPhysicalTable> physicalTables = new ArrayList<InlineEtlPhysicalTable>();
+  private List<IPhysicalTable> physicalTables = new ArrayList<>();
 
   public InlineEtlPhysicalModel() {
     super();
@@ -108,7 +108,7 @@ public class InlineEtlPhysicalModel extends Concept implements IPhysicalModel {
     setProperty( DELIMITER, delimiter );
   }
 
-  public List<InlineEtlPhysicalTable> getPhysicalTables() {
+  public List<IPhysicalTable> getPhysicalTables() {
     return physicalTables;
   }
 

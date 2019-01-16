@@ -44,7 +44,7 @@ public class SqlPhysicalModel extends Concept implements IPhysicalModel {
   private SqlDataSource datasource;
 
   // this contains a list of the physical tables
-  private List<SqlPhysicalTable> physicalTables = new ArrayList<SqlPhysicalTable>();
+  private List<IPhysicalTable> physicalTables = new ArrayList<>();
 
   public SqlPhysicalModel() {
     super();
@@ -88,7 +88,7 @@ public class SqlPhysicalModel extends Concept implements IPhysicalModel {
     return datasource;
   }
 
-  public List<SqlPhysicalTable> getPhysicalTables() {
+  public List<IPhysicalTable> getPhysicalTables() {
     return physicalTables;
   }
 

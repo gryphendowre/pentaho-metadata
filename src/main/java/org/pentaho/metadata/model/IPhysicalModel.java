@@ -27,7 +27,7 @@ import org.pentaho.metadata.model.concept.IConcept;
  * 
  */
 public interface IPhysicalModel extends IConcept {
-  public List<? extends IPhysicalTable> getPhysicalTables();
+  public List<IPhysicalTable> getPhysicalTables();
 
   public String getQueryExecName();
 
